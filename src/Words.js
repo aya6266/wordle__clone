@@ -20,9 +20,14 @@ export const generateWordSet = async () => {
     .then((response) => response.text())
     .then((result) => {
       const wordArr = result.split("\r\n");
+      console.log(wordArr);
       todaysWord = wordArr[Math.floor(Math.random() * wordArr.length)];
       wordSet = new Set(wordArr);
     });
 
   return { wordSet, todaysWord };
 };
+
+// export const arrWord = {
+//   []
+// }
